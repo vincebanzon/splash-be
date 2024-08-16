@@ -1,5 +1,6 @@
 export class Message {
-    name: string;
-    message: string;
+    id: number;
+    author: string;
+    body: string;
 }
   
