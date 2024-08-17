@@ -13,7 +13,7 @@ import { AddMessageDto } from './dto/add-message.dto';
 
 @WebSocketGateway({
   cors: {
-    origin: ["http://localhost:3001"],
+    origin: "*",
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
   }
