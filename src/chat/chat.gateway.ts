@@ -32,13 +32,13 @@ export class ChatGateway implements OnGatewayConnection, OnGatewayDisconnect {
   }
 
   // it will be handled when a client connects to the server
-  handleConnection(socket: Socket) {
-    this.logger.log(`Socket connected: ${socket.id}`);
+  handleConnection(socket: Socket, user) {
+    this.logger.log(`Socket connected: ${socket.id}, ${user}`);
+
     // broadbast a message to all clients
-    this.server.emit('chat', {
-      author: 'bot',
-      body: 'Someone joined the room.'
-    });
+    // this.server.emit('chat', {
+    //   author: '', body: 'Someone joined the room.'
+    // });
   }
 
   // it will be handled when a client disconnects from the server
